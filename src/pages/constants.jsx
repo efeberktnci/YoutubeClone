@@ -62,3 +62,4 @@ export const categories = [
     type: 'menu',
   },
 ];
+
