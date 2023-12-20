@@ -11,8 +11,11 @@ export const YoutubeProvider = ({children}) => {
     const [videos, setVideos] = useState(null);
 
     useEffect(()=>{
-     if(selectedCategory.type === "home" || selectedCategory.type === "trending"){
-        getData(`/${selectedCategory.type}`).then((data) => console.log (data.data))
+     if(
+        selectedCategory.type === "home" || 
+        selectedCategory.type === "trending"
+        ){
+        getData(`/${selectedCategory.type}`).then((data) => setVideos(data.data))
      } 
      },[selectedCategory])
 
