@@ -9,9 +9,9 @@ const Feed = () => {
   console.log(videos); // Add this line to log the videos array
 
   return (
-    <div className="flex gap-10">
+    <div className="flex  ">
       <SideBar />
-      <div>
+      <div className="grid grid-cols-3 gap-4">
         {!videos ? (
           <p>Yükleniyor</p>
         ) : (

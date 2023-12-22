@@ -7,7 +7,7 @@ const SideBar = () => {
    useContext(YoutubeContext);
 
   return (
-    <div className="flex flex-col p-1 md:p-4">
+    <div className="w-1/7 flex-col p-1 md:p-4">
       {categories.map((item, i) => (
         <div key={i}>
           <div

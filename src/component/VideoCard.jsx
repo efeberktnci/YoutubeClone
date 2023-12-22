@@ -1,19 +1,31 @@
 const VideoCard = ({ video }) => {
-  console.log(video)
+  if (!video || !video.thumbnail || !video.thumbnail[1] || !video.thumbnail[1].url) {
+    return null;
+  }
+
+  const thumbnailUrl = video.thumbnail[1].url;
+
+  const channelThumbnailUrl = video.channelThumbnail && video.channelThumbnail[0] && video.channelThumbnail[0].url;
+
   return (
-    <div>
+    <div className="  ">
       {/* Picture */}
       <div>
-        <img src={video.thumbnail[1].url} />
+      <img src={thumbnailUrl} className="" alt="Video Thumbnail" />
+
       </div>
        {/* Detail */}
-      <div>
-        <img src={video.channelThumbnail && video.channelThumbnail[0].url} />
+      <div className="flex gap-4 mt-5 ">
+        <img 
+          src={channelThumbnailUrl} 
+          className="w-14 h-14 rounded-full cursor-pointer" 
+          alt="Channel Thumbnail"
+        />
         <div>
-          <h4> {video.title} </h4>
-          <p>{video.channelTitle}</p>
+          <h4 className="cursor-pointer"> {video.title} </h4>
+          <p className="cursor-pointer">{video.channelTitle}</p>
           <div>
-            <p>{video.viewCount} </p>
+            <p>{video.viewCount} görüntülenme </p>
             <p>{video.publishedTimeText}  </p>
           </div>
         </div>
