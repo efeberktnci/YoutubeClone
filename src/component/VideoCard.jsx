@@ -1,3 +1,5 @@
+import { BsDot } from "react-icons/bs";
+import { FaCheckCircle } from "react-icons/fa";
 
 
 const VideoCard = ({ video }) => {
@@ -17,7 +19,7 @@ const VideoCard = ({ video }) => {
 
       </div>
        {/* Detail */}
-      <div className="flex gap-4 mt-5 ">
+      <div className="flex gap-4 mt-5 rounded">
         <img 
           src={channelThumbnailUrl} 
           className="w-14 h-14 rounded-full cursor-pointer" 
@@ -25,10 +27,11 @@ const VideoCard = ({ video }) => {
         />
         <div>
           <h4 className="cursor-pointer font-bold font-size-5 text-lg"> {video.title} </h4>
-          <p className="cursor-pointer">{video.channelTitle}</p>
-          <div>
-            <p>{video.viewCount} Görüntülenme </p>
-            <p className="text-right mg-right 5">{video.publishedTimeText}  </p>
+          <p className=" flex cursor-pointer text-gray-500">{video.channelTitle}<FaCheckCircle className="ml-1 mt-1"/></p>
+          <div className="flex text-gray-500  ">
+            <p className="">{video.viewCount} Görüntülenme </p>
+            <p className=""><BsDot /></p>
+            <p className="">{video.publishedTimeText}  </p>
           </div>
         </div>
       </div>
