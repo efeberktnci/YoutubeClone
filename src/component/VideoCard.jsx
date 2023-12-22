@@ -1,3 +1,5 @@
+
+
 const VideoCard = ({ video }) => {
   if (!video || !video.thumbnail || !video.thumbnail[1] || !video.thumbnail[1].url) {
     return null;
@@ -8,7 +10,7 @@ const VideoCard = ({ video }) => {
   const channelThumbnailUrl = video.channelThumbnail && video.channelThumbnail[0] && video.channelThumbnail[0].url;
 
   return (
-    <div className="  ">
+    <div className=" ">
       {/* Picture */}
       <div>
       <img src={thumbnailUrl} className="" alt="Video Thumbnail" />
@@ -22,11 +24,11 @@ const VideoCard = ({ video }) => {
           alt="Channel Thumbnail"
         />
         <div>
-          <h4 className="cursor-pointer"> {video.title} </h4>
+          <h4 className="cursor-pointer font-bold font-size-5 text-lg"> {video.title} </h4>
           <p className="cursor-pointer">{video.channelTitle}</p>
           <div>
-            <p>{video.viewCount} görüntülenme </p>
-            <p>{video.publishedTimeText}  </p>
+            <p>{video.viewCount} Görüntülenme </p>
+            <p className="text-right mg-right 5">{video.publishedTimeText}  </p>
           </div>
         </div>
       </div>

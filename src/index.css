@@ -5,4 +5,17 @@
 body{
     background-color: black;
     color: white;
+    
+}
+
+body::-webkit-scrollbar {
+  width: 12px; /* Adjust the width as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Make the thumb transparent */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the track transparent */
 }
